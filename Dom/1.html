@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color:yellow;
+        }
+    </style>
+</head>
+<body class="bg-black">
+   <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">wednesday</div>
+    <div class="day">Thursday</div>
+   </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent)
+    // Accessing the children of a parent
+    const childofpar = parent.children
+    // for(let i=0;i<childofpar.length;i++){
+    //     console.log(childofpar[i].innerHTML)
+    // }
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+    
+    const just = document.querySelector('.day')
+    // Accessing the parent
+    console.log(just.parentElement.children[0].innerHTML)
+
+    console.log(parent.childNodes);
+    parent.childNodes.forEach((element) => {
+        console.log(element)
+    });
+</script>
+</html>
