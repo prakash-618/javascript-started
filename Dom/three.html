@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+  function additem  (item){
+    const li = document.createElement('li')
+    li.innerHTML = item
+    document.querySelector('.language').appendChild(li)
+    }
+    additem("python")
+    additem("java")
+
+    function addItem (item){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(item))
+        const sel = document.querySelector('.language')
+        sel.appendChild(li)
+    }
+    addItem('golang')
+
+    // Edit
+    const selectLi = document.querySelectorAll('li')
+    // selectLi[1].innerHTML ='Ruby'
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode('Ruby'))
+    selectLi[1].replaceWith(li)
+
+    // remove
+
+    const just = document.querySelectorAll('li')
+    just[1].remove()
+
+</script>
+</html>
