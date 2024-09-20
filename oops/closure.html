@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="green">green</button>
+    <button id="pink">pink</button>
+    
+
+    <script>
+        // Lexical scoping
+
+
+        // function parent(){
+        //     let username = "Prakash"
+        //     // parent don't have access to forbeta1 and forbeta2
+        //     console.log(forbeta1);
+        //     console.log(forbeta2);
+        //     function beta1(){
+        //         let forbeta1 = "forbeta1"
+        //         console.log(username)
+        //         console.log(forbeta1);
+                
+        //     }
+        //     function beta2(){
+        //         let forbeta2 = "forbeta2"
+        //         console.log(username)
+        //         console.log(forbeta2);
+        //     }
+        //     beta1()
+        //     beta2()
+        // }
+        // parent()
+
+
+        // Closure
+
+        // function init(){
+        //     let username = 'Prakash'
+        //     function displayname(){
+        //         console.log(username);
+        //     }
+        //     function just(){
+        //         let password ="155fj"
+        //         console.log(username);
+        //         console.log(password);
+        //     }
+        //     return just
+        //     // after returning the refernce of just it returns with lexical scope of it
+        // }
+
+
+        // const user = init()
+        // user()
+
+        function user(color){
+
+            function setcolor(){
+                document.body.style.backgroundColor = `${color}`
+            }
+            return setcolor
+        }
+        // real world scenario of lexical scoping and closure coz onclick expects a function so we returned a function by
+        // using lexical scoping
+        document.getElementById("green").onclick = user("green")
+        document.getElementById("pink").onclick = user("pink")
+
+    </script>
+</body>
+</html>
